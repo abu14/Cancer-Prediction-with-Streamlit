@@ -1,4 +1,11 @@
+# Hi, I'm Abenezer Tesfaye! 👋
 
+## 🚀 About Me
+I'm a Machine Learning Engineer / Data Analyst
+
+Currently working as a Data Analytics Developer.
+
+# Overview
 
 Welcome to my breast cancer prediction project! This project utilizes a logistic regression machine learning model to predict whether a breast mass/ tumour is **benign** or **malignant** based on measurements from a cytology lab.
 
@@ -13,7 +20,7 @@ Feel free to check out the app at the link here [Cancer Prediction App - Abeneze
 ![dashboard](https://github.com/user-attachments/assets/ff124e6e-f0f5-477e-8e22-21e4a53dc471)
 
 
-# Tools Used
+## Tools Used
 
 - **Python:** allows me to analyze the data and find insights and patterns. Made use of the following Python libraries:
     - **Pandas Library** 
@@ -22,7 +29,11 @@ Feel free to check out the app at the link here [Cancer Prediction App - Abeneze
 - **Visual Studio Code:** Executing my Python scripts.
 - **Git & GitHub:** For version control and sharing my Python code and analysis.
 
-## Import Libraries
+
+
+## Data
+
+### Import Libraries
 ```python
 import pandas as pd
 import numpy as np 
@@ -36,7 +47,7 @@ import pickle
 ```
 
 
-## Import & Clean Up Data
+### Import & Clean Up Data
 
 > Data Preparation and Cleanup
 
@@ -58,7 +69,7 @@ This section outlines the steps taken to prepare the data for analysis, ensuring
 ```
 
 
-## Create Model and Scaler
+### Create Model and Scaler
 
 ```python
 def create_model(data):
@@ -85,7 +96,7 @@ def create_model(data):
 ```
 
 
-# Save Model
+### Save Model
 
 ```python
     with open('model/model.pkl', 'wb') as f :
@@ -98,9 +109,9 @@ def create_model(data):
 
 
 
-# App
+## App
 
-## Create Page
+### Create Page
 
 ```python
 st.set_page_config(
@@ -117,7 +128,7 @@ def add_sidebar():
 ```
 
 
-## Slider Section
+### Slider Section
 
 ```python
 def add_sidebar():
