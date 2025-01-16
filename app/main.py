@@ -147,30 +147,6 @@ def get_radar_chart(input_data):
     return fig
 
 
-# def add_predictions(input_data):
-#     model = pickle.load(open('model/model.pkl','rb'))
-#     scaler = pickle.load(open('model/scaler.pkl','rb'))
-
-#     input_array = np.array(list(input_data.values())).reshape(1,-1) 
-#     input_array_scaled = scaler.transform(input_array)
-
-#     prediction = model.predict(input_array_scaled)
-
-#     st.header("Cell Cluster Prediction")
-#     st.write("Cell Cluster is: ")
-#     if prediction[0] == 0:
-#         st.write("Benign")
-#     else:
-#         st.write("Malignant")
-
-#     proba = model.predict_proba(input_array_scaled)
-#     st.write("Probability of being Benign: ", model.predict_proba(input_array_scaled)[0][0])
-#     st.write("Probability of being Malignant: ", model.predict_proba(input_array_scaled)[0][1])
-
-#     st.write("Please note that this app should be used to assist medical professionals in making a diagnosis, and not be used as a substitute for a professional diagnosis.")
-
-
-
 def add_predictions(input_data):
     model = pickle.load(open('model/model.pkl', 'rb'))
     scaler = pickle.load(open('model/scaler.pkl', 'rb'))
@@ -201,17 +177,6 @@ def add_predictions(input_data):
 
 
 def main():
-    # st.set_page_config(
-    #         page_title="Breast Cancer Predictor App",
-    #         page_icon= " female-doctor",
-    #         layout="wide",
-    #         initial_sidebar_state="expanded"
-    #     )
-    # Include the CSS file
-    with open('assets\style.css') as f:
-        st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
-
     input_data = add_sidebar()
     
     with st.container():
